@@ -13,12 +13,12 @@ func _process(_delta):
 func _physics_process(_delta):
 	position += get_input()*speed
 	
-	if Input.is_action_pressed("shoot"):
+	if Input.is_action_just_pressed("shoot"):
 		var bullet = Bullet.instance()
 		bullet.position = position
-		get_node("root/Game/Bullets").add_child(Bullet)
+		get_node("/root/Game/Bullets").add_child(bullet)
 		reloaded = false
-		$Timer.start
+		
 
 
 

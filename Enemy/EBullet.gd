@@ -1,19 +1,18 @@
 extends KinematicBody2D
 
-export var speed = 8
+export var velocity = Vector2(0, 10)
 
 
 func _ready():
 	pass
 
+
 func _physics_process(_delta):
-	position.y -= speed
-	
-	if global_position.y <-200:
+	position += velocity
+	if position.y > get_viewport_rect().size.y + 30.0:
 		queue_free()
-		
-		
-		
+	pass
+
+
 func _on_Area2D_body_entered(body):
 	body.queue_free()
-	queue_free()
