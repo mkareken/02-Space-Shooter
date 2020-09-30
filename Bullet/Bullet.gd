@@ -14,6 +14,7 @@ func _physics_process(_delta):
 		
 		
 		
+
 func _on_Area2D_body_entered(body):
 	body.queue_free()
 	queue_free()

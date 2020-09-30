@@ -6,7 +6,7 @@ export var speed = 2.0
 onready var w = int(get_viewport_rect().size.y)
 onready var h = int(get_viewport_rect().size.x)
 
-onready var EBullet = load("res://Enemy.EBullet.tscn")
+onready var EBullet = load("res://Enemy/EBullet.tscn")
 
 
 

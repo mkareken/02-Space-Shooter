@@ -3,7 +3,7 @@ extends Node2D
 onready var Enemy = load("res://Enemy/Enemy.tscn")
 export var spawn_probability = 0.3
 export var max_count = 10
-onready var w = get_viewport_rect().size.x
+onready var w = int(get_viewport_rect().size.x)
 
 func _ready():
 	randomize()
